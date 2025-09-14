@@ -4,26 +4,6 @@
     <meta charset="UTF-8">
     <title>Yahoo News</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        #datetime { font-size: 14px; margin-left: 20px; }
-        #backToTop {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #400090;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 8px;
-            cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-        }
-        @media (max-width: 768px) {
-            header input[type="text"] { width: 150px; }
-            nav { flex-wrap: wrap; gap: 8px; }
-        }
-    </style>
 </head>
 <body>
 <header>
@@ -33,7 +13,7 @@
     <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
 </header>
 
-<!-- ✅ Breaking News Ticker -->
+<!-- Breaking News Ticker -->
 <div class="ticker">
     <span>Breaking: Global summit on climate change begins — Business: Oil prices rise — Entertainment: New blockbuster movie released — Health: Experts warn of flu outbreak</span>
 </div>
@@ -76,7 +56,7 @@
 <button id="backToTop" onclick="scrollToTop()">⬆ Top</button>
 
 <script>
-    // ✅ Dark Mode with Persistence
+    // Dark Mode
     function toggleDarkMode() {
         document.body.classList.toggle("dark");
         localStorage.setItem("darkMode", document.body.classList.contains("dark") ? "enabled" : "disabled");
@@ -85,13 +65,13 @@
         document.body.classList.add("dark");
     }
 
-    // ✅ Live Date & Time
+    // Date & Time
     function updateDateTime() {
         document.getElementById("datetime").textContent = new Date().toLocaleString();
     }
     setInterval(updateDateTime, 1000);
 
-    // ✅ Search Functionality
+    // Search Filter
     document.getElementById("searchBar").addEventListener("keyup", function () {
         const filter = this.value.toLowerCase();
         document.querySelectorAll(".news-box").forEach(box => {
@@ -99,7 +79,7 @@
         });
     });
 
-    // ✅ Back to Top Button
+    // Back to Top
     const backToTop = document.getElementById("backToTop");
     window.addEventListener("scroll", () => {
         backToTop.style.display = window.scrollY > 200 ? "block" : "none";
