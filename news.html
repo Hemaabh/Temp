@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yahoo News</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Yahoo News</div>
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+    </header>
+
+    <nav>
+        <a href="yahoo-clone.html">Home</a>
+        <a href="news.html">News</a>
+        <a href="#">Mail</a>
+        <a href="#">Finance</a>
+        <a href="#">Sports</a>
+        <a href="#">Entertainment</a>
+        <a href="#">Life</a>
+        <a href="#">More</a>
+    </nav>
+
+    <main>
+        <h1>Latest News</h1>
+        <div class="news-box">
+            <h2>Breaking News Story</h2>
+            <p>This is the news section page with detailed articles and updates.</p>
+        </div>
+        <div class="news-box">
+            <h2>Another Big Update</h2>
+            <p>More stories from around the world will be displayed here.</p>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 Yahoo. All rights reserved.
+    </footer>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark");
+        }
+    </script>
+</body>
+</html>

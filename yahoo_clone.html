@@ -2,88 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Yahoo</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f5f5f5;
-        }
-        header {
-            background-color: #400090;
-            color: white;
-            padding: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        header .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        header input[type="text"] {
-            padding: 8px;
-            width: 300px;
-        }
-        nav {
-            background: #e0e0e0;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-        main {
-            padding: 20px;
-        }
-        .news-box {
-            background: white;
-            padding: 15px;
-            margin-bottom: 10px;
-            box-shadow: 0 0 5px rgba(0,0,0,0.1);
-        }
-        footer {
-            background: #ddd;
-            text-align: center;
-            padding: 10px;
-            font-size: 14px;
-        }
-    </style>
+    <title>Yahoo Clone</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">Yahoo</div>
-        <input type="text" placeholder="Search Yahoo">
-    </header>
+<header>
+    <div class="logo">Yahoo</div>
+    <input type="text" placeholder="Search Yahoo">
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+</header>
 
-    <nav>
-        <a href="#">Mail</a>
-        <a href="#">News</a>
-        <a href="#">Finance</a>
-        <a href="#">Sports</a>
-        <a href="#">Entertainment</a>
-        <a href="#">Life</a>
-        <a href="#">More</a>
-    </nav>
+<nav>
+    <a href="yahoo-clone.html">Home</a>
+    <a href="news.html">News</a>
+    <a href="#">Mail</a>
+    <a href="#">Finance</a>
+    <a href="#">Sports</a>
+    <a href="#">Entertainment</a>
+    <a href="#">Life</a>
+    <a href="#">More</a>
+</nav>
 
-    <main>
-        <div class="news-box">
-            <h2>Top Story Headline</h2>
-            <p>This is a sample news story from the Yahoo homepage. Latest headlines will go here.</p>
-        </div>
-        <div class="news-box">
-            <h2>Another Headline</h2>
-            <p>More news stories, sports updates, or financial market info here.</p>
-        </div>
-    </main>
+<main>
+    <div class="news-box">
+        <h2>Top Story Headline</h2>
+        <p>This is a sample news story from the Yahoo homepage. Latest headlines will go here.</p>
+    </div>
+    <div class="news-box">
+        <h2>Another Headline</h2>
+        <p>More news stories, sports updates, or financial market info here.</p>
+    </div>
+</main>
 
-    <footer>
-        &copy; 2025 Yahoo. All rights reserved.
-    </footer>
+<footer>
+    &copy; 2025 Yahoo. All rights reserved.
+</footer>
+
+<script>
+    function toggleDarkMode() {
+        document.body.classList.toggle("dark");
+    }
+</script>
 </body>
 </html>
